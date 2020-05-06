@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Appointment{% endblock%}
+{% block meta_description%} Contact Page for Kenny Morrison {% endblock %}
+{% block content %}
+
+
+
+
+  <!-- ***** Breadcrumb Area Start ***** -->
+  <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url({% static "website/img/bg-img/12.jpg" %});">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-12">
+          <h2 class="title">Appointment</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="breadcumb--con">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a href="#"><i class="fa fa-home"></i> Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Contact</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Breadcrumb Area End ***** -->
+{% if message_name %}
+<center><h2>Thanks {{ message_name }}</h2>
+  <p>Your message has been sent!</p>
+</center>
+<br/><br/><br/>
+{% endif %}
+
+	<center>
+	<h1> Review Submitted Information </h1>
+	<strong> Your Name: </strong> {{  your_name }}<br/>
+	<strong> Your Phone: </strong>{{  your_phone }}<br/>
+	<p> {{  your_email }} </p>
+	<p> {{  your_address }} </p>
+	<p> {{  your_schedule }} </p>
+	<p> {{  your_time }} </p>
+	<p> {{  your_message }} </p>
+	</center>
+
+
+<br/><br/><br/><br/>
+
+{% endblock %}
+
+
